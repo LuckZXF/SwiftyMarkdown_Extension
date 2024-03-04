@@ -1,0 +1,6 @@
+framework module SwiftyMarkdown_Extension {
+  umbrella header "SwiftyMarkdown_Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

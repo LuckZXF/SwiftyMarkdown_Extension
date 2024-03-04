@@ -1,0 +1,24 @@
+{
+  "name": "SwiftyMarkdown_Extension",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftyMarkdown_Extension.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/179988305@qq.com/SwiftyMarkdown_Extension",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "179988305@qq.com": "179988305@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/179988305@qq.com/SwiftyMarkdown_Extension.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "SwiftyMarkdown_Extension/Classes/**/*",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}

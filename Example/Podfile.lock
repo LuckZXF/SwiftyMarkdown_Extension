@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyMarkdown_Extension (0.1.0)
+
+DEPENDENCIES:
+  - SwiftyMarkdown_Extension (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyMarkdown_Extension:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftyMarkdown_Extension: 03828f7613932216c0fe71011d429773310d3915
+
+PODFILE CHECKSUM: 159435e7459a61e5fc546e48b2916e4f6fb7487b
+
+COCOAPODS: 1.13.0

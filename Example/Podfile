@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '11.0'
+inhibit_all_warnings!
+
+target 'SwiftyMarkdown_Extension_Example' do
+  pod 'SwiftyMarkdown_Extension', :path => '../'
+
+  target 'SwiftyMarkdown_Extension_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
