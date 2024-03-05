@@ -269,7 +269,15 @@ public class SwiftyLineProcessor {
                             currentArr.append("")
                         }
                         tableData.append(currentArr)
-                        continue
+                        if heading == lines.last {
+                            var tableLine: SwiftyLine = foundAttributes.last!
+                            tableLine.tableData = tableData
+                            tableData = []
+                            foundAttributes[foundAttributes.count-1] = tableLine
+                            continue
+                        } else {
+                            continue
+                        }
                     }
                 }
             } else {
