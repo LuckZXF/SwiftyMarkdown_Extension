@@ -243,7 +243,7 @@ public class SwiftyLineProcessor {
                 let updatedPrevious: SwiftyLine = foundAttributes.last!
                 let updatedPreviousLineStyle:MarkdownLineStyle = updatedPrevious.lineStyle as! MarkdownLineStyle
                 if let lineStyle: MarkdownLineStyle = updatedPrevious.lineStyle as? MarkdownLineStyle, lineStyle == .table {
-                    guard var contentArr:[String] = String(heading).components(separatedBy: "|") as? [String] else { continue }
+                    guard var contentArr:[String] = String(heading).trimmingCharacters(in: .whitespaces).components(separatedBy: "|") as? [String] else { continue }
                     contentArr.removeAll(where: { $0.count == 0})
                     var currentArr:[String] = contentArr.map({ content in
                         return content.trimmingCharacters(in: .whitespaces)
@@ -252,7 +252,7 @@ public class SwiftyLineProcessor {
                         let charSet = CharacterSet(charactersIn: "-" )
                         return content.unicodeScalars.allSatisfy({ charSet.contains($0) }) && content.count >= 3
                     }).count == currentArr.count {  // 判断是否每个元素都只包含---
-                        if var preArr:[String] = updatedPrevious.line.components(separatedBy: "|") as? [String] {
+                        if var preArr:[String] = updatedPrevious.line.trimmingCharacters(in: .whitespaces).components(separatedBy: "|") as? [String] {
                             preArr.removeAll(where: {$0.count == 0})
                             if currentArr.count >= preArr.count {
                                 tableData.append(preArr)
